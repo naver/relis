@@ -33,15 +33,12 @@ conda install pytorch==1.9.0 torchvision==0.10.0 cudatoolkit=11.1 -c pytorch -c 
 pip install -U opencv-python
 
 # under your working directory
-git clone git@github.com:facebookresearch/detectron2.git
 cd detectron2
 pip install -e .
 pip install git+https://github.com/cocodataset/panopticapi.git
 pip install git+https://github.com/mcordts/cityscapesScripts.git
 
-cd ..
-git clone git@github.com:facebookresearch/Mask2Former.git
-cd Mask2Former
+cd ../Mask2Former
 pip install -r requirements.txt
 cd mask2former/modeling/pixel_decoder/ops
 sh make.sh
