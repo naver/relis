@@ -12,9 +12,18 @@ This is a codebase to evaluate the robustness and uncertainty properties of sema
 
 ## Dependencies
 
-This repo depends on two libraries that implement segmentation models, [`mmsegmentation`](https://github.com/open-mmlab/mmsegmentation) and [`detectron2`](https://github.com/facebookresearch/detectron2) (detectron2 is only needed for Mask2Former model, and can be ignored for all other models). Please refer to the requirements of mmsegmentation and detectron2 libraries for requirements.
+This repo depends on two libraries that implement segmentation models, [`mmsegmentation`](https://github.com/open-mmlab/mmsegmentation/tree/0.x) and [`detectron2`](https://github.com/facebookresearch/detectron2) (detectron2 is only needed for Mask2Former model, and can be ignored for all other models). Please refer to the requirements of mmsegmentation and detectron2 libraries for requirements.
 
-> Note that the mmsegmentation folder included in this package contains modified files in order to measure uncertainty metrics, thus replacing it with the official mmsegmentation repository may break things.
+> Note that the mmsegmentation folder included in this package contains modified files in order to measure uncertainty metrics, thus replacing it with the official mmsegmentation repository will break things. Moreover, a new version of mmsegmentation [`1.x`](https://github.com/open-mmlab/mmsegmentation/tree/1.x) has appeared which has done some major refactoring with no backward compatibility.
+
+A config file of the environment used for mmsegmentation models can be found in [`mmseg_env.yml`](https://github.com/naver/relis/blob/main/mmseg_env.yml) while the config for detectron2 models (i.e. Mask2Former) is [`det2_env.yml`](https://github.com/naver/relis/blob/main/det2_env.yml)
+
+For detectron2 environment it is recommended to follow the instructions in [`INSTALL.md`](https://github.com/naver/relis/blob/main/Mask2Former/INSTALL.md). For mmsegmentation you can create an environment from the `.yml` file with:
+```
+git clone https://github.com/naver/relis.git
+cd relis
+conda env create -f mmseg_env.yml
+```
 
 ---
 
