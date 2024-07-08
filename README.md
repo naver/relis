@@ -91,7 +91,7 @@ The script `train_lts_network.py` trains a network to predict a temperature valu
 
 ## Reference
 
-**Reliability in Semantic Segmentation: Are We on the Right Track?** (to appear at CVPR 2023)  
+**Reliability in Semantic Segmentation: Are We on the Right Track?** (CVPR 2023)  
 Pau de Jorge, Riccardo Volpi, Philip Torr and Grégory Rogez
 ```
     @InProceedings{deJorge_2023_CVPR,
